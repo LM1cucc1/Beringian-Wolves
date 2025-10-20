@@ -38,7 +38,7 @@ test1<-summary(aov(Body_mass~Group,data=m1length))
 TukeyHSD(aov(Body_mass~Group,data=m1length))
 
 test<-subsample_aov("Pleistocene-Siberia",4,100,m1length) # includes all groups but want to exclude the smallest sample size as well
-# gotta figure out why this code is being annoying
+
 
 # removing Siberia
 m1length_nosib<-m1length[-c(which(m1length$Group=="Pleistocene-Siberia")),]
@@ -235,6 +235,7 @@ wilcox.test(P4_width ~ Group,data = Recent_Yukon)#differ
 ks.test(Yukon_Pleist$P4_width,Recent_can$P4_width)
 
 subsample_metric("Pleistocene-Yukon","Recent",3,100,P4width)# do not differ
+
 
 
 
